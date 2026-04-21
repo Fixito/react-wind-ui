@@ -1,11 +1,13 @@
 {
   "name": "react-wind-ui",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "typecheck": "tsc --noEmit",
@@ -29,6 +31,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "eslint-plugin-react-x": "^4.2.3",
     "globals": "^17.5.0",
+    "oxfmt": "^0.45.0",
     "oxlint": "^1.60.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.2",
