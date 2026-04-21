@@ -30,8 +30,6 @@ export default function Navbar() {
   return (
     <nav className="bg-navbar after:bg-border relative after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px">
       <div className="relative container flex h-16 items-center justify-between">
-        <NavbarToggle isOpen={isOpen} onClick={handleToggleMenu} ref={buttonRef} />
-
         <div className="flex items-stretch justify-center gap-6 sm:items-center sm:justify-start">
           <NavbarBrand />
 
@@ -39,6 +37,8 @@ export default function Navbar() {
             <NavbarLinks navigation={navigation} />
           </div>
         </div>
+
+        <NavbarToggle isOpen={isOpen} onClick={handleToggleMenu} ref={buttonRef} />
 
         <NavbarActions />
       </div>

@@ -4,7 +4,7 @@ export function NavbarActions() {
   return (
     <button
       type="button"
-      className="focus:outline-ring text-muted-foreground hover:text-navbar-accent-foreground relative rounded-full p-1 focus:outline-2 focus:outline-offset-2"
+      className="focus:outline-ring text-muted-foreground hover:text-navbar-accent-foreground relative hidden rounded-full p-1 focus:outline-2 focus:outline-offset-2 lg:block"
     >
       <span className="absolute -inset-1.5" />
       <span className="sr-only">Activer/désactiver le mode sombre</span>
