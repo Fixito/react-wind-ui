@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import App from './app.tsx';
 
-import './index.css';
+import './tailwind.css';
 
 const rootElement = document.getElementById('root');
 
