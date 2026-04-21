@@ -1,6 +1,5 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [],
   "categories": {
     "correctness": "error",
     "suspicious": "warn"
@@ -170,6 +169,7 @@
         "react-dom/no-unsafe-iframe-sandbox": "warn",
         "react-dom/no-use-form-state": "error",
         "react-dom/no-void-elements-with-children": "error",
+        "react/react-in-jsx-scope": "off",
         "react/rules-of-hooks": "error",
         "react/exhaustive-deps": "warn",
         "react/only-export-components": [
