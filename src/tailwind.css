@@ -4,9 +4,22 @@
 
 @theme inline {
   --font-sans: 'Inter', sans-serif;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
   --color-muted-foreground: var(--muted-foreground);
+
+  --color-navbar-accent-foreground: var(--navbar-accent-foreground);
+  --color-navbar-accent: var(--navbar-accent);
+  --color-navbar-foreground: var(--navbar-foreground);
+  --color-navbar-primary-foreground: var(--navbar-primary-foreground);
+  --color-navbar-primary: var(--navbar-primary);
+  --color-navbar: var(--navbar);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
 @theme {
@@ -14,12 +27,27 @@
 }
 
 :root {
-  --background: light-dark(var(--white), var(--neutral-900));
-  --foreground: light-dark(var(--neutral-950), var(--white));
-  --muted-foreground: light-dark(var(--neutral-600), var(--neutral-300));
+  --background: light-dark(var(--gray-50), var(--gray-900));
+  --foreground: light-dark(var(--gray-950), var(--white));
+  --secondary-foreground: light-dark(var(--gray-600), var(--gray-300));
+  --muted-foreground: var(--gray-400);
+
+  --navbar-accent-foreground: var(--white);
+  --navbar-accent: oklch(from var(--white) l c h / 0.05);
+  --navbar-primary: oklch(from var(--gray-950) l c h / 0.5);
+  --navbar-primary-foreground: var(--white);
+  --navbar-foreground: var(--gray-300);
+  --navbar: var(--gray-800);
+
+  --border: light-dark(var(--gray-300), oklch(from var(--white) l c h / 0.1));
+  --input: light-dark(var(--gray-300), oklch(from var(--white) l c h / 0.1));
+  --ring: var(--indigo-500);
 }
 
 @layer base {
+  * {
+    @apply border-border;
+  }
   html {
     font-family: var(--font-sans);
   }
@@ -27,6 +55,12 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@utility page {
+  min-block-size: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 @utility container {

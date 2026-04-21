@@ -11,6 +11,7 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
+  "js/ts.preferences.autoImportFileExcludePatterns": ["lucide-react"],
   "oxc.fmt.configPath": ".oxfmtrc.json",
   "oxc.typeAware": true
 }

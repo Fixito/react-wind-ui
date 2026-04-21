@@ -1,13 +1,16 @@
 import Footer from './components/footer.tsx';
+import Navbar from './components/navbar/navbar.tsx';
 
 export default function App() {
   return (
-    <>
-      <main>
-        <h1 className="text-center text-3xl font-bold underline">React Wind UI</h1>
+    <div className="page">
+      <Navbar />
+
+      <main className="container my-12">
+        <h1 className="text-center text-3xl font-bold">React Wind UI</h1>
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
