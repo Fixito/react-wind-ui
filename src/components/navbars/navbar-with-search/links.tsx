@@ -12,7 +12,7 @@ interface NavbarLinksProps {
 
 export function NavbarLinks({ navigation }: NavbarLinksProps) {
   return (
-    <div className="space-x-4">
+    <div className="flex gap-x-4">
       {navigation.map((item) => (
         <NavbarLink key={item.name} item={item} />
       ))}

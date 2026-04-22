@@ -9,12 +9,14 @@
   --color-foreground: var(--foreground);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted-foreground: var(--muted-foreground);
+  --color-primary-foreground: var(--primary-foreground);
 
   --color-navbar-accent-foreground: var(--navbar-accent-foreground);
   --color-navbar-accent: var(--navbar-accent);
   --color-navbar-foreground: var(--navbar-foreground);
   --color-navbar-primary-foreground: var(--navbar-primary-foreground);
   --color-navbar-primary: var(--navbar-primary);
+  --color-navbar-border: var(--navbar-border);
   --color-navbar: var(--navbar);
 
   --color-border: var(--border);
@@ -31,12 +33,14 @@
   --foreground: light-dark(var(--gray-950), var(--white));
   --secondary-foreground: light-dark(var(--gray-600), var(--gray-300));
   --muted-foreground: var(--gray-400);
+  --primary-foreground: var(--white);
 
   --navbar-accent-foreground: var(--white);
   --navbar-accent: oklch(from var(--white) l c h / 0.05);
   --navbar-primary: oklch(from var(--gray-950) l c h / 0.5);
   --navbar-primary-foreground: var(--white);
   --navbar-foreground: var(--gray-300);
+  --navbar-border: oklch(from var(--white) l c h / 0.1);
   --navbar: var(--gray-800);
 
   --border: light-dark(var(--gray-300), oklch(from var(--white) l c h / 0.1));

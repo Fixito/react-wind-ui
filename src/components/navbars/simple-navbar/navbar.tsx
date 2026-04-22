@@ -28,7 +28,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-navbar after:bg-border relative after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px">
+    <nav className="bg-navbar after:bg-navbar-border relative after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px">
       <div className="relative container flex h-16 items-center justify-between">
         <NavbarToggle isOpen={isOpen} onClick={handleToggleMenu} ref={buttonRef} />
 

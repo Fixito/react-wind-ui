@@ -1,5 +1,5 @@
 import Footer from './components/footer.tsx';
-import Navbar from './components/navbars/simple-navbar';
+import Navbar from './components/navbars/navbar-with-search';
 
 export default function App() {
   return (

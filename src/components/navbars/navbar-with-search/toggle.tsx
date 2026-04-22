@@ -9,7 +9,7 @@ interface NavbarToggleProps {
 export function NavbarToggle({ isOpen, onClick, ref }: NavbarToggleProps) {
   return (
     <button
-      className="focus:outline-ring text-muted-foreground hover:text-navbar-accent-foreground hover:bg-navbar-accent relative inline-flex items-center justify-center rounded-md p-2 focus:outline-2 focus:-outline-offset-1 sm:hidden"
+      className="focus:outline-ring text-muted-foreground hover:text-navbar-accent-foreground hover:bg-navbar-accent relative inline-flex items-center justify-center rounded-md p-2 focus:outline-2 focus:-outline-offset-1 lg:hidden"
       aria-controls="mobile-menu"
       aria-expanded={isOpen}
       ref={ref}
