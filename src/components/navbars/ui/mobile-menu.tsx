@@ -2,11 +2,7 @@ import { useEffect, useRef } from 'react';
 
 import { classNames } from '@/lib/utils.ts';
 
-interface NavigationItem {
-  name: string;
-  href: string;
-  current: boolean;
-}
+import type { NavigationItem } from '../data.ts';
 
 interface NavbarMobileMenuProps {
   navigation: NavigationItem[];
@@ -61,17 +57,17 @@ export function NavbarMobileMenu({
   if (!isOpen) return null;
 
   return (
-    <div id="mobile-menu" ref={menuRef} className="block lg:hidden">
+    <div id="mobile-menu" ref={menuRef} className="mobile-menu-animate block sm:hidden">
       <div className="space-y-1 px-2 pt-2 pb-3">
-        {navigation.map((item) => (
-          <NavbarMobileMenuItem key={item.name} item={item} />
+        {navigation.map((item, i) => (
+          <NavbarMobileMenuItem key={item.name} item={item} index={i} />
         ))}
       </div>
     </div>
   );
 }
 
-function NavbarMobileMenuItem({ item }: { item: NavigationItem }) {
+function NavbarMobileMenuItem({ item, index }: { item: NavigationItem; index: number }) {
   return (
     <a
       key={item.name}
@@ -82,7 +78,11 @@ function NavbarMobileMenuItem({ item }: { item: NavigationItem }) {
           ? 'bg-navbar-primary text-navbar-primary-foreground'
           : 'text-navbar-foreground hover:bg-navbar-accent hover:text-navbar-accent-foreground',
         'block rounded-md px-3 py-2 text-base font-medium',
+        'mobile-menu-item-animate',
       )}
+      style={{
+        transitionDelay: `${index * 40}ms`,
+      }}
     >
       {item.name}
     </a>

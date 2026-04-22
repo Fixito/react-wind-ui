@@ -1,10 +1,6 @@
 import { classNames } from '@/lib/utils.ts';
 
-interface NavigationItem {
-  name: string;
-  href: string;
-  current: boolean;
-}
+import type { NavigationItem } from '../data.ts';
 
 interface NavbarLinksProps {
   navigation: NavigationItem[];

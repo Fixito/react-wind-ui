@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
 
-import { NavbarActions } from './actions';
-import { NavbarBrand } from './brand';
-import { NavbarLinks } from './links';
-import { NavbarMobileMenu } from './mobile-menu';
-import { NavbarToggle } from './toggle';
+import { NavbarActions } from '../ui/actions.tsx';
+import { NavbarBrand } from '../ui/brand.tsx';
+import { NavbarLinks } from '../ui/links.tsx';
+import { NavbarMobileMenu } from '../ui/mobile-menu.tsx';
+import { NavbarToggle } from '../ui/toggle.tsx';
 
 interface NavigationItem {
   name: string;

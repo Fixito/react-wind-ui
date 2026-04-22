@@ -1,24 +1,12 @@
 import { Search } from 'lucide-react';
 import { useRef, useState } from 'react';
 
-import { NavbarActions } from './actions';
-import { NavbarBrand } from './brand';
-import { NavbarLinks } from './links';
-import { NavbarMobileMenu } from './mobile-menu';
-import { NavbarToggle } from './toggle';
-
-interface NavigationItem {
-  name: string;
-  href: string;
-  current: boolean;
-}
-
-const navigation: NavigationItem[] = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-];
+import { navigation } from '../data.ts';
+import { NavbarActions } from '../ui/actions';
+import { NavbarBrand } from '../ui/brand';
+import { NavbarLinks } from '../ui/links';
+import { NavbarMobileMenu } from '../ui/mobile-menu.tsx';
+import { NavbarToggle } from '../ui/toggle.tsx';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
